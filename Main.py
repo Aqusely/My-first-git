@@ -1,6 +1,16 @@
 import random 
 
-def random_number():
-    guess_number = random.randint(1, 100)
-    return guess_number
-print(random_number)
+gues_number = random.randint(1, 100)
+
+def start_game(answer):
+    if answer == 'yes':
+        while input() != gues_number:
+            input()
+        else:
+            return 'You win'
+    else:
+        return 'Bye'
+
+    
+    
+print(start_game(input('Are you ready to play my game?: ')))

@@ -1,16 +1,7 @@
-import random 
+your_number = input('Enter your number: ')
+count = 0 
 
-gues_number = random.randint(1, 100)
-
-def start_game(answer):
-    if answer == 'yes':
-        while input() != gues_number:
-            input()
-        else:
-            return 'You win'
-    else:
-        return 'Bye'
-
-    
-    
-print(start_game(input('Are you ready to play my game?: ')))
+while count < int(your_number):
+    count+=1
+    print(count)
+print('End')

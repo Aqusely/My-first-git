@@ -1,16 +1,21 @@
 import random 
 
-random_number = random.randint(1, 100)
+user_trys = []     #список пользовательских попыток
+random_number = random.randint(1, 100)    # Генерация случайного числа
+count = 0  #Переменная счета кол-ва попыток 
 
 def start_game(answer):
     if answer == 'yes':
-        game_logic(int(input("Enter your number: ")))
+        return game_logic()
     else:
         print('Bye')
-    
-def game_logic(count):
-    while count != random_number:
-        count = int(input('Enter your number: '))
+
+
+def game_logic():
+    tries  = input('Enter your number: ')
+    while int(tries) != random_number:
+        user_trys.append(tries)
+        tries  = input('Enter your number: ')
     print('You win')
 
 print(random_number)
